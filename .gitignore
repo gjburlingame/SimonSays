@@ -1,0 +1,19 @@
+# IntelliJ IDEA
+.idea/
+*.iml
+out/
+
+# Gradle
+.gradle/
+build/
+
+# Java
+*.class
+*.log
+
+# Local server files
+26.3Server/
+
+# Operating system
+.DS_Store
+Thumbs.db
