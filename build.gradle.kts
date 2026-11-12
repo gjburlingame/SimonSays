@@ -3,7 +3,7 @@ plugins {
 }
 
 group = "me.gj"
-version = "1.0.1"
+version = "1.1.0"
 
 repositories {
     mavenCentral()
@@ -16,6 +16,12 @@ dependencies {
 
 java {
     toolchain.languageVersion.set(JavaLanguageVersion.of(25))
+}
+
+tasks.processResources {
+    filesMatching("plugin.yml") {
+        expand("version" to project.version)
+    }
 }
 
 val localDeploy = file("local.deploy.gradle")

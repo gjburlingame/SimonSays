@@ -1,5 +1,5 @@
 name: SimonSays
-version: 1.0.0
+version: ${version}
 main: me.gj.simonsays.SimonSays
 api-version: '26.3'
 description: A Simon Says minigame for Minecraft
