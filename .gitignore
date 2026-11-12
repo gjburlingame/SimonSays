@@ -14,6 +14,10 @@ build/
 # Local server files
 26.3Server/
 
+# Local development configuration
+local.deploy.gradle
+local.deploy.gradle.kts
+
 # Operating system
 .DS_Store
 Thumbs.db

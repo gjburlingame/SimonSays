@@ -3,7 +3,7 @@ plugins {
 }
 
 group = "me.gj"
-version = "1.0.0"
+version = "1.0.1"
 
 repositories {
     mavenCentral()
@@ -18,17 +18,8 @@ java {
     toolchain.languageVersion.set(JavaLanguageVersion.of(25))
 }
 
-/* tasks.register<Copy>("deployPlugin") {
-    dependsOn(tasks.jar)
+val localDeploy = file("local.deploy.gradle")
 
-    from(tasks.jar)
-    into(file("C:/Users/gj/Documents/GregPlugins/26.3Server/plugins"))
-
-    doLast {
-        println("Plugin deployed to: ${destinationDir.absolutePath}")
-    }
+if (localDeploy.exists()) {
+    apply(from = localDeploy)
 }
-
-tasks.build {
-    finalizedBy("deployPlugin")
-} */
